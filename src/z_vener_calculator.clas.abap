@@ -46,7 +46,7 @@ CLASS Z_VENER_CALCULATOR IMPLEMENTATION.
      rv_product = iv_first_factor * iv_second_factor.
   ENDMETHOD.
   METHOD subtract.
-     rv_difference = iv_minuend * iv_subtrahend.
+     rv_difference = iv_minuend - iv_subtrahend.
   ENDMETHOD.
 ENDCLASS.
 
