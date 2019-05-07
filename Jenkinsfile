@@ -4,7 +4,7 @@ def GITURL = 'https://github.com/veneraldo/my-abap-rest-api.git'
 def BRANCH = 'master'
 def PIPELINE_GITURL = 'https://github.com/veneraldo/my-abap-ci-postman.git'
 def PACKAGE = '''$SIMPLE_CALCULATOR'''
-def COVERAGE = 80
+def COVERAGE = 0
 def VARIANT = "DEFAULT"
 
 parallel (
