@@ -37,16 +37,16 @@ ENDCLASS.
 
 CLASS Z_VENER_CALCULATOR IMPLEMENTATION.
   METHOD add.
-     rv_sum = iv_first_addend + iv_second_addend.
+      rv_sum = iv_first_addend + iv_second_addend.
   ENDMETHOD.
   METHOD divide.
-     rv_quotient = iv_dividend / iv_divisor.
+      rv_quotient = iv_dividend / iv_divisor.
   ENDMETHOD.
   METHOD multiply.
-     rv_product = iv_first_factor * iv_second_factor.
+       rv_product = iv_first_factor * iv_second_factor.
   ENDMETHOD.
   METHOD subtract.
-     rv_difference = iv_minuend * iv_subtrahend.
+      rv_difference = iv_minuend * iv_subtrahend.
   ENDMETHOD.
 ENDCLASS.
 
