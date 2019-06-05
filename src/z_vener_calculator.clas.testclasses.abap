@@ -28,12 +28,12 @@ class Z_VENER_CALCULATOR_TEST IMPLEMENTATION.
       EXPORTING
         act = lv_sum
         exp = lv_expected
-        msg = 'Calculator Addtion Test Failed' ).
+        msg = 'Calculator Addition Test Failed' ).
    ENDMETHOD.
 
    METHOD subtract_6minus2_dif4.
-     DATA lv_expected  TYPE int2 VALUE 12.
-     DATA lv_difference      TYPE int2.
+     DATA lv_expected   TYPE int2 VALUE 12.
+     DATA lv_difference TYPE int2.
      lv_difference = mo_calculator->subtract(
        EXPORTING
          iv_minuend    = 6

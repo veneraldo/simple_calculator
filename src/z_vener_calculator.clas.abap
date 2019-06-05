@@ -35,18 +35,20 @@ public section.
 ENDCLASS.
 
 
-CLASS Z_VENER_CALCULATOR IMPLEMENTATION.
-  METHOD add.
+CLASS z_vener_calculator IMPLEMENTATION.
+
+    method add.
       rv_sum = iv_first_addend + iv_second_addend.
-  ENDMETHOD.
-  METHOD divide.
+    endmethod.
+    method divide.
       rv_quotient = iv_dividend / iv_divisor.
-  ENDMETHOD.
-  METHOD multiply.
-       rv_product = iv_first_factor * iv_second_factor.
-  ENDMETHOD.
-  METHOD subtract.
-      rv_difference = iv_minuend * iv_subtrahend.
-  ENDMETHOD.
-ENDCLASS.
+    endmethod.
+    method multiply.
+      rv_product = iv_first_factor * iv_second_factor.
+    endmethod.
+    method subtract.
+      rv_difference = iv_minuend - iv_subtrahend.
+    endmethod.
+endclass.
+
 
