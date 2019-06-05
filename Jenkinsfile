@@ -42,7 +42,7 @@ pipeline {
                       sh 'which escript'
                       sh 'ls -lrta'
                       withCredentials([usernamePassword(credentialsId: 'NPL', passwordVariable: 'SAP_PASSWORD', usernameVariable: 'SAP_USER')]) {
-                       sh "/usr/local/bin/escript sap_abap_unit_test ${SAP_HOST} ${SAP_PORT} ${PROTOCOL} ${SAP_CLIENT} ${SAP_USER} ${SAP_PASSWORD} ${TYPE} \${params.OBJECT} ${COVERAGE}"
+                       sh "/usr/local/bin/escript sap_abap_unit_test ${SAP_HOST} ${SAP_PORT} ${PROTOCOL} ${SAP_CLIENT} ${SAP_USER} ${SAP_PASSWORD} ${TYPE} '$SIMPLE_CALCULATOR' ${COVERAGE}"
                       }
                       //sh './aunit-junit-parser aunit-junit.xsl return_aunit.xml > test-results/return-aunit-result.xml'
                       sh 'ls -lrta test-results'
