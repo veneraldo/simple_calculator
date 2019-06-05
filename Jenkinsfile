@@ -77,7 +77,7 @@ pipeline {
                       sh 'which escript'
                       sh 'ls -lrta'
                       withCredentials([usernamePassword(credentialsId: 'NPL', passwordVariable: 'SAP_PASSWORD', usernameVariable: 'SAP_USER')]) {
-                       sh "/usr/local/bin/escript sap_abap_unit_test ${SAP_HOST} ${SAP_PORT} ${PROTOCOL} ${SAP_CLIENT} ${SAP_USER} ${SAP_PASSWORD} ${TYPE} ${OBJECT} ${COVERAGE}"
+                       sh "/usr/local/bin/escript sap_abap_unit_test ${SAP_HOST} ${SAP_PORT} ${PROTOCOL} ${SAP_CLIENT} ${SAP_USER} ${SAP_PASSWORD} ${TYPE} '\$SIMPLE_CALCULATOR' ${COVERAGE}"
                       }
                      } // end steps clause
                   } // end stage clause
@@ -85,7 +85,7 @@ pipeline {
                   stage('ABAP Test Cockpit (ATC)') {
                   steps {
                       withCredentials([usernamePassword(credentialsId: 'NPL', passwordVariable: 'SAP_PASSWORD', usernameVariable: 'SAP_USER')]) {
-                       sh "/usr/local/bin/escript sap_abap_atc ${SAP_HOST} ${SAP_PORT} ${PROTOCOL} ${SAP_CLIENT} ${SAP_USER} ${SAP_PASSWORD} ${TYPE} ${OBJECT} ${COVERAGE}"
+                       sh "/usr/local/bin/escript sap_abap_atc ${SAP_HOST} ${SAP_PORT} ${PROTOCOL} ${SAP_CLIENT} ${SAP_USER} ${SAP_PASSWORD} ${TYPE} '\$SIMPLE_CALCULATOR' ${COVERAGE}"
                       }
                       
                   } // end steps clause
