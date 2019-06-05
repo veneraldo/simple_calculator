@@ -32,7 +32,7 @@ class Z_VENER_CALCULATOR_TEST IMPLEMENTATION.
    ENDMETHOD.
 
    METHOD subtract_6minus2_dif4.
-     DATA lv_expected   TYPE int2 VALUE 12.
+     DATA lv_expected   TYPE int2 VALUE 4.
      DATA lv_difference TYPE int2.
      lv_difference = mo_calculator->subtract(
        EXPORTING
