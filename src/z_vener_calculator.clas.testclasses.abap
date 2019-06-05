@@ -18,7 +18,7 @@ class Z_VENER_CALCULATOR_TEST IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD add_2plus2_sum4.
-    DATA lv_expected  TYPE int2 VALUE 12.
+    DATA lv_expected  TYPE int2 VALUE 4.
     DATA lv_sum       TYPE int2.
     lv_sum = mo_calculator->add(
       EXPORTING
