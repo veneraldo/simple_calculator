@@ -20,6 +20,11 @@ pipeline {
                       //file(name: "FILE", description: "Choose a file to upload (sample option)")
                      }
           stages {
+                  stage('Preparation Erlang Tools') {
+                  steps { 
+                     checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'my_token', url: 'https://innersource.accenture.com/scm/radiostar/devops-abap.git']]]
+                        }  
+                  }
                   stage('ABAP Unit Test') {
                    when {
                         expression { params.COVERAGE == 'false' }
